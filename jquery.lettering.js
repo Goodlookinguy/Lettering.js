@@ -186,9 +186,12 @@
 							startSentence = i + 1;
 						}
 					}
-				}
-				if ( (i - startSentence) > 0 )
+					else if ( (i + 1) >= text.length && (i + 1 - startSentence) > 0 )
+					{
 						a.push(text.substring(startSentence, i + 1));
+					}
+				}
+				
 				var inject = '';
 				var klass = 'sentence';
 				if (a.length) {
