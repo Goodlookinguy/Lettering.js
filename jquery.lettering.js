@@ -15,7 +15,7 @@
 		var a = t.text().split(splitter), inject = '';
 		if (a.length) {
 			$(a).each(function(i, item) {
-				inject += '<span class="'+klass+(i+1)+'">'+item+'</span>'+after;
+				inject += '<span class="'+klass+(i+1)+' letteringjs-'+klass+'">'+item+'</span>'+after;
 			});
 			t.empty().append(inject);
 		}
@@ -196,7 +196,7 @@
 				var klass = 'sentence';
 				if (a.length) {
 					$(a).each(function(i, item) {
-						inject += '<span class="'+klass+(i+1)+'">'+item+'</span>';
+						inject += '<span class="'+klass+(i+1)+' letteringjs-'+klass+'">'+item+'</span>';
 					});
 					t.empty().append(inject);
 				}
